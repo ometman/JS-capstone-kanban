@@ -19,6 +19,7 @@
     "asn1.js": "^5.4.1",
     "assert": "^2.0.0",
     "available-typed-arrays": "^1.0.5",
+    "axios": "^1.5.0",
     "balanced-match": "^1.0.2",
     "base64-js": "^1.5.1",
     "batch": "^0.6.1",
