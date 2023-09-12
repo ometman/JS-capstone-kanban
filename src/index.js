@@ -1,7 +1,7 @@
 import './index.css';
-import getProducts from './modules/getItems.js';
+import getProducts from './modules/getProducts.js';
 import itemPopup from './modules/itemPopup';
-import xItemPopup from './modules/closePopUp';
+import closePopup from './modules/closePopUp';
 
 // Items Interface
 const itemsContainer = async () => {
@@ -22,6 +22,7 @@ const itemsContainer = async () => {
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
         </li>`
       );
+
       itemPopup(i + 1, theProducts[i].image);
     }
 
@@ -39,4 +40,4 @@ const itemsContainer = async () => {
 
 // display items
 itemsContainer();
-xItemPopup();
+closePopup();

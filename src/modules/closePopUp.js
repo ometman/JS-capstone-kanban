@@ -1,6 +1,6 @@
 import * as infoInterface from './rescomInterface.js';
 
-const xItemPopup = async () => {
+const closePopup = async () => {
   const closeModalBtn = infoInterface.closeBtn;
   const blurBg = document.querySelectorAll('.blur');
   closeModalBtn.innerHTML = '<a href="#"><p class="close-btn">&times</p></a>';
@@ -12,4 +12,4 @@ const xItemPopup = async () => {
   });
 };
 
-export default xItemPopup;
+export default closePopup;
