@@ -7,14 +7,14 @@ resItemImage.alt = 'image of the selected item';
 export const itemIdContainer = document.createElement('div');
 itemIdContainer.className = 'close-btn-container';
 
-export const closeBtn = document.createElement('div');
+export const closeBtn = document.createElement('p');
 closeBtn.className = 'close-btn-container';
 
 // create reservation title
 export const resTitle = document.createElement('h2');
 resTitle.className = 'reserve-data-heading';
 // create reservation list container
-export const resListContainer = document.createElement('div');
+export const resListContainer = document.createElement('ul');
 resListContainer.className = 'reserve-list-container';
 
 // create reservation form title

@@ -7,7 +7,6 @@ const url =
 export const getResData = async (imgId) => {
   try {
     const { data } = await axios.get(url + imgId);
-    console.log(log);
 
     showRes(data);
   } catch (error) {

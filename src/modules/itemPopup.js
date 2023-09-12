@@ -1,6 +1,6 @@
 import * as infoInterface from './rescomInterface.js';
-import { postResData } from './postRescom.js';
-import { getResData } from './getRescom.js';
+import { postResData } from './postResCom.js';
+import { getResData } from './getResCom.js';
 
 const itemPopup = (imgId, theimg) => {
   const reserveBtn = document.querySelectorAll('.reserve-btn');
