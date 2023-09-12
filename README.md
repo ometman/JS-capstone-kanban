@@ -1,1 +1,1 @@
-# second-capstone-kanban
+# JS-capstone-kanban
