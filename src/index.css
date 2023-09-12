@@ -136,29 +136,26 @@ footer {
   position: fixed;
   display: none;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  top: 5px;
-
-  left: 5px;
-  width: 70%;
-  height: 600px;
-
-  padding: 5px;
+  top: 1%;
+  left: 25%;
+  right: 25%;
+  bottom: auto;
+  width: 50%;
+  height: auto;  
+  padding: 1%;
   border: 1px solid #6d95c7;
   border-radius: 1%;
   background-color: #6d95c7;
   gap: 5px;
   z-index: 99;
-  border: 2px solid blue;
+  overflow-y: scroll;
 }
 
 .item-image {
-  width: 30%;
-  height: 150px;
+  width: 40%;
+  height: 300px;
   border-radius: 1.5%;
-  border: 2px solid red;
 }
 
 .reserve-data-heading {
@@ -172,17 +169,18 @@ footer {
 .reserve-list-container {
   background: none;
   width: 40%;
-  height: auto;
+  height: 3rem;
   border: 1px solid #fff;
-  padding: 4%;
+  padding: 1%;
   box-shadow: 1px 1px 1px 4px #06486e;
   text-align: center;
   overflow-y: scroll;
+  list-style-type: none;
 }
 
 .reserve-list-content {
-  margin: 0.5rem auto;
-  padding: 0.5rem auto;
+  width: auto;
+  margin: 1px auto;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 0.8rem;
