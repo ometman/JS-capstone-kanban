@@ -156,8 +156,8 @@ footer {
 }
 
 .item-image {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 300px;
   border-radius: 1.5%;
 }
 
@@ -172,21 +172,21 @@ footer {
 .reserve-list-container {
   background: none;
   width: 40%;
-  height: auto;
   border: 1px solid #fff;
   padding: 1%;
   box-shadow: 1px 1px 1px 4px #06486e;
   text-align: center;
   overflow-y: scroll;
   list-style-type: none;
+  border: 1px solid red;
+  flex: 1;
 }
 
 .reserve-list-content {
-  margin: 1px auto;
+  margin: 2px auto;
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 16px;
   background: none;
 }
 
@@ -265,16 +265,24 @@ footer {
   background-color: #6d95c7;
   justify-content: center;
   padding: 10px;
+  align-items: start;
+  text-align: left;
 }
 
 .container .description {
   background-color: #6d95c7;
   flex: 1;
-  padding: 5px 5px 5px 30px;
+  padding: 0 5px 5px 30px;
 }
 
 .container .price {
   background-color: #6d95c7;
   flex: 1;
-  padding: 5px 5px 5px 20px;
+  padding: 0 5px 5px 20px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bolder;
+  background-color: #6d95c7;
 }
