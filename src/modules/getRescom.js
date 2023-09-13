@@ -1,5 +1,5 @@
 import { showRes, showCom } from './showResCom.js';
-// import { countRes, countCom } from './counters.js';
+import { comCounter } from './counters.js';
 
 const url =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=';
@@ -26,6 +26,8 @@ export const getComData = async (imgId) => {
     resultData = await response.json();
     showCom(resultData);
     // countRes(resultData);
+    comCounter(resultData.length);
+    console.log(resultData.length)
   } catch (error) {
     error.message = 'No comments available';
   }

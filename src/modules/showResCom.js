@@ -16,7 +16,7 @@ export const showCom = (comdata) => {
     comList.className = 'reserve-list-content';
     comList.innerHTML = `
     ${comdata[comIndex].date_start} - ${comdata[comIndex].date_end} by ${comdata[comIndex].username}`;
-    infoInterface.comListContainer.appendChild(comList);
+    infoInterface.resListContainer.appendChild(comList);
   });
 };
 

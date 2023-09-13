@@ -19,8 +19,13 @@ resListContainer.className = 'reserve-list-container';
 
 // create reservation form title
 export const resFormInstruction = document.createElement('h3');
-resFormInstruction.className = 'reserve-form-title';
+resFormInstruction.className = 'form-title';
 resFormInstruction.innerText = 'Add a reservation';
+
+// create comments form title
+export const comFormInstruction = document.createElement('h3');
+comFormInstruction.className = 'form-title';
+comFormInstruction.innerText = 'Add a comment';
 
 // create username input
 export const userInput = document.createElement('input');
@@ -70,4 +75,5 @@ itemModal.appendChild(resItemImage);
 itemModal.appendChild(resTitle);
 itemModal.appendChild(resListContainer);
 itemModal.appendChild(resFormInstruction);
+itemModal.appendChild(comFormInstruction);
 itemModal.appendChild(resForm);
