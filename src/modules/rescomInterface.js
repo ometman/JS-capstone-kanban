@@ -6,13 +6,13 @@ resItemImage.alt = 'image of the selected item';
 
 const des = document.createElement('div');
 des.className = 'description';
-des.innerHTML = ``;
 const price = document.createElement('div');
 price.className = 'price';
-price.innerHTML = ``;
 const descriptionLabel = document.createElement('div');
 descriptionLabel.className = 'descriptionlabel, label';
 descriptionLabel.innerHTML = `Description :`;
+const count = document.createElement('span');
+count.innerHTML = 0;
 const priceLabel = document.createElement('div');
 priceLabel.className = 'pricelabel, label';
 priceLabel.innerHTML = `Price :`;
@@ -28,6 +28,7 @@ closeBtn.className = 'close-btn-container';
 
 // create reservation title
 export const resTitle = document.createElement('h2');
+resTitle.innerHTML = `Reservations`;
 resTitle.className = 'reserve-data-heading';
 // create reservation list container
 export const resListContainer = document.createElement('ul');
@@ -80,10 +81,12 @@ resForm.appendChild(endDate);
 resForm.appendChild(submitBtn);
 
 // add modal elements
+
 export const itemModal = document.querySelector('.reserve-modal');
 itemModal.appendChild(closeBtn);
 itemModal.appendChild(resItemImage);
 itemModal.append(container);
+itemModal.append(count);
 itemModal.appendChild(resTitle);
 itemModal.appendChild(resListContainer);
 itemModal.appendChild(resFormInstruction);
