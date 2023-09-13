@@ -1,4 +1,4 @@
-import { showRes } from './showResCom.js';
+import { showRes, showCom } from './showResCom.js';
 // import { countRes, countCom } from './counters.js';
 
 const url =
@@ -16,4 +16,18 @@ export const getResData = async (imgId) => {
   }
 };
 
-export default getResData;
+const url2 =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/comments?item_id=';
+
+export const getComData = async (imgId) => {
+  let resultData;
+  try {
+    const response = await fetch(url2 + imgId);
+    resultData = await response.json();
+    showCom(resultData);
+    // countRes(resultData);
+  } catch (error) {
+    error.message = 'No comments available';
+  }
+};
+

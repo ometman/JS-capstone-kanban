@@ -10,4 +10,14 @@ export const showRes = (resdata) => {
   });
 };
 
-export default showRes;
+export const showCom = (comdata) => {
+  comdata.forEach((com, comIndex) => {
+    const comList = document.createElement('li');
+    comList.className = 'reserve-list-content';
+    comList.innerHTML = `
+    ${comdata[comIndex].date_start} - ${comdata[comIndex].date_end} by ${comdata[comIndex].username}`;
+    infoInterface.comListContainer.appendChild(comList);
+  });
+};
+
+
