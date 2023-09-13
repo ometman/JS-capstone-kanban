@@ -21,9 +21,7 @@ const itemPopup = (imgId, theimg) => {
         getResData(imgId);
       }
       const data = await getData(btnIndex + 1);
-
-      console.log(data);
-      price.innerHTML = `Price: ${data.price} $;`;
+      price.innerHTML = `${data.price} $;`;
       title.innerHTML = `${data.title}`;
     });
   });
