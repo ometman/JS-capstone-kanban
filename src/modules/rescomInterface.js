@@ -4,6 +4,17 @@ export const resItemImage = document.createElement('img');
 resItemImage.className = 'item-image';
 resItemImage.alt = 'image of the selected item';
 
+const des = document.createElement('div');
+des.className = 'description';
+des.innerHTML = ``;
+const price = document.createElement('div');
+price.className = 'price';
+price.innerHTML = ``;
+const container = document.createElement('div');
+container.className = 'container';
+container.append(des, price);
+//container.appendChild(price);
+
 export const itemIdContainer = document.createElement('div');
 itemIdContainer.className = 'close-btn-container';
 
@@ -67,6 +78,7 @@ resForm.appendChild(submitBtn);
 export const itemModal = document.querySelector('.reserve-modal');
 itemModal.appendChild(closeBtn);
 itemModal.appendChild(resItemImage);
+itemModal.append(container);
 itemModal.appendChild(resTitle);
 itemModal.appendChild(resListContainer);
 itemModal.appendChild(resFormInstruction);
