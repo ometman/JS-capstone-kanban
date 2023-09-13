@@ -1,14 +1,20 @@
 import './index.css';
 import getProducts from './modules/getProducts.js';
-import itemPopup from './modules/itemPopup';
-import closePopup from './modules/closePopUp';
+import itemPopup from './modules/itemPopup.js';
+import closePopup from './modules/closePopUp.js';
+import getData from './modules/getData.js';
+import Logo from './logo/logo.jpg';
+
+const logo = document.querySelector('.logo');
+console.log(logo);
+logo.src = Logo;
 
 // Items Interface
 const itemsContainer = async () => {
   const theProducts = await getProducts();
   const productsList = document.getElementById('products-list');
   productsList.innerHTML = '';
-  const getAllProduts = () => {
+  const getAllProduts = async () => {
     for (let i = 0; i < theProducts.length; i += 1) {
       const itemId = i + 1;
       productsList.insertAdjacentHTML(
@@ -25,14 +31,6 @@ const itemsContainer = async () => {
 
       itemPopup(i + 1, theProducts[i].image);
     }
-
-    // const button = document.querySelectorAll('.reserve-btn');
-    // for (let btn of button) {
-    //   btn.addEventListener('click', (e) => {
-    //     const card = e.target.parentNode;
-    //     console.log(card);
-    //   });
-    // }
   };
 
   return getAllProduts();
@@ -41,3 +39,4 @@ const itemsContainer = async () => {
 // display items
 itemsContainer();
 closePopup();
+getData();
