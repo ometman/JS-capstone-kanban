@@ -1,7 +1,7 @@
 import * as resInterface from './rescomInterface.js';
 import { getReserveData } from './getResCom.js';
 
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations/';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/y9LdLW1Io3OiUKMxCNVo/reservations/';
 
 export const postReserveData = (imgId) => {
   const theForm = resInterface.resForm;
@@ -28,7 +28,7 @@ export const postReserveData = (imgId) => {
     });
     // console.log(resInput);
     const theResponse = postData.json();
-    console.log(theResponse);
+    console.log(theResponse)
     getReserveData(imgId);
     theForm.reset();
   });

@@ -1,7 +1,7 @@
 import { showReserveData } from './showResCom.js';
 // import the count
 
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/y9LdLW1Io3OiUKMxCNVo/reservations?item_id=';
 
 export const getReserveData = async (imgId) => {
   let resultData;
