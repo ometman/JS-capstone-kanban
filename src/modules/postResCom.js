@@ -28,7 +28,7 @@ export const postReserveData = (imgId) => {
     });
     // console.log(resInput);
     const theResponse = postData.json();
-    console.log(theResponse)
+    console.log(theResponse);
     getReserveData(imgId);
     theForm.reset();
   });

@@ -10,9 +10,17 @@ itemIdContainer.className = 'close-btn-container';
 export const closeBtn = document.createElement('p');
 closeBtn.className = 'close-btn-container';
 
+// create Item title
+export const itemTitle = document.createElement('h2');
+itemTitle.className = 'item-data-heading';
+
+// create Item details
+export const itemDetails = document.createElement('ul');
+itemDetails.className = 'item-details-container';
+
 // create reservation title
-export const resTitle = document.createElement('h2');
-resTitle.className = 'reserve-data-heading';
+export const popupTitle = document.createElement('h2');
+popupTitle.className = 'item-data-heading';
 
 // create reservation list container
 export const resListContainer = document.createElement('ul');
@@ -68,7 +76,9 @@ resForm.appendChild(submitBtn);
 export const itemModal = document.querySelector('.reserve-modal');
 itemModal.appendChild(closeBtn);
 itemModal.appendChild(resItemImage);
-itemModal.appendChild(resTitle);
+itemModal.appendChild(itemTitle);
+itemModal.appendChild(itemDetails);
+itemModal.appendChild(popupTitle);
 itemModal.appendChild(resListContainer);
 itemModal.appendChild(resFormInstruction);
 itemModal.appendChild(resForm);

@@ -22,7 +22,7 @@ const itemsContainer = async () => {
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
         </li>`,
       );
-      itemPopup(i + 1, theProducts[i].image);
+      itemPopup(i + 1, theProducts[i].image, theProducts[i]);
     }
   };
 
