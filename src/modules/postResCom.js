@@ -1,7 +1,7 @@
 import * as resInterface from './rescomInterface.js';
 
-const url =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations/';
+// const url =
+('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/votSVyM8b966LHhFVfLV/reservations/');
 
 export const postResData = (imgId) => {
   let count = 0;

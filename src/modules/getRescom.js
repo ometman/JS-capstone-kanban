@@ -1,7 +1,7 @@
 import { showRes } from './showResCom.js';
 import axios from 'axios';
 
-const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations?item_id=`;
+const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/votSVyM8b966LHhFVfLV/reservations?item_id=`;
 
 export const getResData = async (imgId) => {
   try {
