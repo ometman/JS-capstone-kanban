@@ -1,14 +1,14 @@
 import './index.css';
 import getProducts from './modules/getItems.js';
-import itemPopup from './modules/itemPopup';
-import xItemPopup from './modules/closePopUp';
+import itemPopup from './modules/itemPopup.js';
+import closeItemPopup from './modules/closePopUp.js';
 
 // Items Interface
 const itemsContainer = async () => {
   const theProducts = await getProducts();
   const productsList = document.getElementById('products-list');
   productsList.innerHTML = '';
-  const getAllProduts = () => {
+  const allProducts = () => {
     for (let i = 0; i < theProducts.length; i += 1) {
       const itemId = i + 1;
       productsList.insertAdjacentHTML(
@@ -20,23 +20,14 @@ const itemsContainer = async () => {
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
-        </li>`
+        </li>`,
       );
       itemPopup(i + 1, theProducts[i].image);
     }
-
-    // const button = document.querySelectorAll('.reserve-btn');
-    // for (let btn of button) {
-    //   btn.addEventListener('click', (e) => {
-    //     const card = e.target.parentNode;
-    //     console.log(card);
-    //   });
-    // }
   };
 
-  return getAllProduts();
+  return allProducts();
 };
 
-// display items
 itemsContainer();
-xItemPopup();
+closeItemPopup();

@@ -1,30 +1,37 @@
 import * as resInterface from './rescomInterface.js';
+import { getReserveData } from './getResCom.js';
 
-const url =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations/';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HrIKPRrYjrxS00NlIVCD/reservations/';
 
-export const postResData = (imgId) => {
-  let count = 0;
+export const postReserveData = (imgId) => {
   const theForm = resInterface.resForm;
   theForm.addEventListener('submit', async (ev) => {
     ev.preventDefault();
-    count += 1;
-    if (count === imgId + 1) {
-      const itemid = String(imgId);
-      const username = resInterface.userInput.value;
-      const dateStart = resInterface.startDate.value;
-      const dateEnd = resInterface.endDate.value;
-      const resInput = {
-        itemid,
-        username,
-        dateStart,
-        dateEnd,
-      };
-      await fetch(`${url}`, {
-        method: 'POST',
-        body: JSON.stringify(resInput),
-      });
-      theForm.reset();
-    }
+    const itemId = String(imgId);
+    const userName = resInterface.userInput.value;
+    const dateStart = resInterface.startDate.value;
+    const dateEnd = resInterface.endDate.value;
+    const resInput = {
+      // eslint-disable-next-line quote-props
+      'item_id': itemId,
+      // eslint-disable-next-line quote-props
+      'username': userName,
+      // eslint-disable-next-line quote-props
+      'date_start': dateStart,
+      // eslint-disable-next-line quote-props
+      'date_end': dateEnd,
+    };
+    // console.log(resInput);
+    const postData = await fetch(`${url}`, {
+      method: 'POST',
+      body: JSON.stringify(resInput),
+    });
+    // console.log(resInput);
+    const theResponse = postData.json();
+    console.log(theResponse);
+    getReserveData(imgId);
+    theForm.reset();
   });
 };
+
+export default postReserveData;

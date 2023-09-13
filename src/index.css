@@ -136,13 +136,12 @@ footer {
   position: fixed;
   display: none;
   flex-direction: column;
-  align-items: center;
-  top: 1%;
-  left: 25%;
-  right: 25%;
-  bottom: auto;
-  width: 50%;
-  height: auto;  
+  top: 2%;
+  left: 30%;
+  right: 30%;
+  bottom: 2%;
+  width: 40%;
+  height: auto;
   padding: 1%;
   border: 1px solid #6d95c7;
   border-radius: 1%;
@@ -153,34 +152,42 @@ footer {
 }
 
 .item-image {
-  width: 40%;
+  width: 65%;
   height: 300px;
   border-radius: 1.5%;
+  align-self: center;
 }
 
 .reserve-data-heading {
+  margin: 0.3rem auto;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   background: none;
   font-size: 1.5rem;
   font-weight: 400;
+  align-self: center;
 }
 
-.reserve-list-container {
+ul.reserve-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-self: start;
   background: none;
-  width: 40%;
+  margin-left: 18%;
+  width: 45%;
   height: 3rem;
-  border: 1px solid #fff;
-  padding: 1%;
-  box-shadow: 1px 1px 1px 4px #06486e;
-  text-align: center;
+  border: 0.5px solid #fff;
+  padding: 0.5% 0 0.5% 0.5%;
+  text-align: left;
   overflow-y: scroll;
   list-style-type: none;
 }
 
-.reserve-list-content {
-  width: auto;
-  margin: 1px auto;
+li.reserve-list-content {
+  padding: 0;
+  width: 100%;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 0.8rem;
@@ -216,8 +223,8 @@ footer {
 .username,
 .startdate,
 .enddate {
-  width: 60%;
-  padding: 2%;
+  width: 50%;
+  padding: 1%;
   border-radius: 1%;
   color: #000;
   font-family: 'Roboto', sans-serif;
@@ -250,7 +257,7 @@ footer {
   color: #fff;
 }
 
-products-list {
+.products-list {
   display: flex;
   justify-content: center;
   align-items: center;

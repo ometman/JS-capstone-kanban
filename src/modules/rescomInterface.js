@@ -13,6 +13,7 @@ closeBtn.className = 'close-btn-container';
 // create reservation title
 export const resTitle = document.createElement('h2');
 resTitle.className = 'reserve-data-heading';
+
 // create reservation list container
 export const resListContainer = document.createElement('ul');
 resListContainer.className = 'reserve-list-container';
@@ -27,7 +28,7 @@ export const userInput = document.createElement('input');
 userInput.className = 'username';
 userInput.id = 'username';
 userInput.type = 'text';
-userInput.value = '';
+// userInput.value = '';
 userInput.placeholder = 'Your name';
 userInput.maxLength = '20';
 userInput.required = true;
@@ -37,7 +38,7 @@ export const startDate = document.createElement('input');
 startDate.className = 'startdate';
 startDate.id = 'startdate';
 startDate.type = 'date';
-startDate.value = '';
+// startDate.value = '';
 startDate.required = true;
 
 // create end date input
@@ -45,7 +46,7 @@ export const endDate = document.createElement('input');
 endDate.className = 'enddate';
 endDate.id = 'enddate';
 endDate.type = 'date';
-endDate.value = '';
+// endDate.value = '';
 endDate.required = true;
 
 // create submit btn

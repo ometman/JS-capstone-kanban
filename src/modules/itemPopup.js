@@ -1,6 +1,6 @@
 import * as infoInterface from './rescomInterface.js';
-import { postResData } from './postResCom.js';
-import { getResData } from './getResCom.js';
+import { getReserveData } from './getResCom.js';
+import { postReserveData } from './postResCom.js';
 
 const itemPopup = async (imgId, theimg) => {
   const reserveBtn = document.querySelectorAll('.reserve-btn');
@@ -14,8 +14,8 @@ const itemPopup = async (imgId, theimg) => {
           ele.className = 'blur-bg';
         });
         infoInterface.resItemImage.src = theimg;
-        postResData(imgId);
-        getResData(imgId);
+        getReserveData(imgId);
+        postReserveData(imgId);
       }
     });
   });
