@@ -10,10 +10,15 @@ des.innerHTML = ``;
 const price = document.createElement('div');
 price.className = 'price';
 price.innerHTML = ``;
+const descriptionLabel = document.createElement('div');
+descriptionLabel.className = 'descriptionlabel, label';
+descriptionLabel.innerHTML = `Description :`;
+const priceLabel = document.createElement('div');
+priceLabel.className = 'pricelabel, label';
+priceLabel.innerHTML = `Price :`;
 const container = document.createElement('div');
 container.className = 'container';
-container.append(des, price);
-//container.appendChild(price);
+container.append(descriptionLabel, des, priceLabel, price);
 
 export const itemIdContainer = document.createElement('div');
 itemIdContainer.className = 'close-btn-container';
