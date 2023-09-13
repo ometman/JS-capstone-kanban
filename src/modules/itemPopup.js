@@ -1,15 +1,17 @@
 import * as infoInterface from './rescomInterface.js';
 import { postResData } from './postResCom.js';
 import { getResData } from './getResCom.js';
+import getData from './getData.js';
 
 const itemPopup = (imgId, theimg) => {
   const reserveBtn = document.querySelectorAll('.reserve-btn');
   const blurBg = document.querySelectorAll('.blur');
+  const price = document.querySelector('.price');
+  const title = document.querySelector('.description');
 
   reserveBtn.forEach((btn, btnIndex) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       infoInterface.itemModal.style.display = 'flex';
-      console.log('btn index', btnIndex);
       if (btnIndex + 1 === imgId) {
         blurBg.forEach((ele) => {
           ele.className = 'blur-bg';
@@ -17,8 +19,12 @@ const itemPopup = (imgId, theimg) => {
         infoInterface.resItemImage.src = theimg;
         postResData(imgId);
         getResData(imgId);
-        console.log('image id', imgId);
       }
+      const data = await getData(btnIndex + 1);
+
+      console.log(data);
+      price.innerHTML = `Price: ${data.price} $;`;
+      title.innerHTML = `${data.title}`;
     });
   });
 };
