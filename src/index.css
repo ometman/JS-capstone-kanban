@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #fdf4f5;
   box-sizing: border-box;
 }
 
@@ -148,7 +147,6 @@ footer {
   border-radius: 1%;
   margin: 0 auto;
   border: 1px solid;
-  overflow: scroll;
 }
 
 .reservation-container {
@@ -166,8 +164,8 @@ footer {
 
 .fa-x {
   position: fixed;
-  top: 10px;
-  right: 18px;
+  top: 15px;
+  right: 60px;
   font-size: 30px;
 }
 
@@ -180,7 +178,7 @@ footer {
 }
 
 .item-image {
-  width: 100px;
+  width: 200px;
   height: 200px;
   border-bottom: 10px;
 }
@@ -270,26 +268,23 @@ footer {
 }
 
 .container {
-  width: 30%;
+  width: auto;
   display: flex;
-  background-color: #6d95c7;
   justify-content: center;
   padding: 10px;
-  align-items: start;
+  align-items: center;
   text-align: left;
 }
 
 .container .description {
-  padding: 0 5px 5px 30px;
+  padding: 10px;
 }
 
 .container .price {
-  padding: 0 5px 5px 30px;
+  padding: 10px;
 }
 
 .label {
   font-size: 18px;
   font-weight: bolder;
-  background-color: #6d95c7;
-  width: 300px;
 }
