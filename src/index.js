@@ -2,11 +2,10 @@ import './index.css';
 import getProducts from './modules/getProducts.js';
 import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
-import getData from './modules/getData.js';
 import Logo from './logo/logo.jpg';
+import getResFormData from './modules/getResFormData';
 
 const logo = document.querySelector('.logo');
-console.log(logo);
 logo.src = Logo;
 
 // Items Interface
@@ -29,7 +28,8 @@ const itemsContainer = async () => {
         </li>`
       );
 
-      itemPopup(i + 1, theProducts[i].image);
+      itemPopup();
+      //await getResdataApi(itemId);
     }
   };
 
@@ -39,4 +39,7 @@ const itemsContainer = async () => {
 // display items
 itemsContainer();
 closePopup();
-getData();
+//getData();
+
+const form = document.querySelector('.reserve-form');
+form.addEventListener('submit', getResFormData);
