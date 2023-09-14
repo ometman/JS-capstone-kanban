@@ -1,6 +1,6 @@
 import './index.css';
 import getProducts from './modules/getProducts.js';
-import itemPopup from './modules/itemPopup.js';
+import itemPopup, {commentPopup} from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import getData from './modules/getData.js';
 import Logo from './logo/logo.jpg';
@@ -30,6 +30,7 @@ const itemsContainer = async () => {
       );
 
       itemPopup(i + 1, theProducts[i].image);
+      commentPopup(i + 1, theProducts[i].image);
     }
   };
 
