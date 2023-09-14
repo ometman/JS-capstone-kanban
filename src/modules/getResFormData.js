@@ -1,4 +1,4 @@
-import sendRestData from './sendRestData';
+import sendRestData from './sendRestData.js';
 
 const getResFormData = async () => {
   const username = document.querySelector('.username');
@@ -7,8 +7,9 @@ const getResFormData = async () => {
   const startDate = document.querySelector('.startdate');
   const enddate = document.querySelector('.enddate');
 
-  if (startDate.value === '' || enddate.value === '' || username.value === '')
+  if (startDate.value === '' || enddate.value === '' || username.value === '') {
     return;
+  }
 
   const item_id = id.innerHTML;
   console.log('id', item_id);
@@ -17,7 +18,7 @@ const getResFormData = async () => {
     date_end: startDate.value,
     date_start: enddate.value,
     username: username.value,
-    item_id: item_id,
+    item_id,
   };
 
   await sendRestData(obj);

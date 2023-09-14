@@ -17,7 +17,7 @@ const price = document.createElement('div');
 price.className = 'price';
 const descriptionLabel = document.createElement('div');
 descriptionLabel.className = 'descriptionlabel, label';
-descriptionLabel.innerHTML = `Description :`;
+descriptionLabel.innerHTML = 'Description :';
 const count = document.createElement('span');
 count.className = 'count';
 count.innerHTML = 0;
@@ -25,7 +25,7 @@ const resTitlecontainer = document.createElement('div');
 resTitlecontainer.className = 'restitleContainer';
 const priceLabel = document.createElement('div');
 priceLabel.className = 'pricelabel, label';
-priceLabel.innerHTML = `Price :`;
+priceLabel.innerHTML = 'Price :';
 const container = document.createElement('div');
 container.className = 'container';
 container.append(descriptionLabel, des, priceLabel, price);
@@ -42,10 +42,10 @@ resTitle.innerHTML = 'Reservations';
 resTitle.className = 'reserve-data-heading';
 // create reservation list container
 
-//create ul to host reversation list
+// create ul to host reversation list
 const restList = document.createElement('ul');
 restList.className = 'reservations';
-//map reservations here
+// map reservations here
 restList.innerHTML = '';
 export const resListContainer = document.createElement('div');
 resListContainer.className = 'reserve-list-container';

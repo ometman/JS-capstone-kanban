@@ -3,7 +3,7 @@ import getProducts from './modules/getProducts.js';
 import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import Logo from './logo/logo.jpg';
-import getResFormData from './modules/getResFormData';
+import getResFormData from './modules/getResFormData.js';
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
@@ -29,7 +29,7 @@ const itemsContainer = async () => {
       );
 
       itemPopup();
-      //await getResdataApi(itemId);
+      // await getResdataApi(itemId);
     }
   };
 
@@ -39,7 +39,7 @@ const itemsContainer = async () => {
 // display items
 itemsContainer();
 closePopup();
-//getData();
+// getData();
 
 const form = document.querySelector('.reserve-form');
 form.addEventListener('submit', getResFormData);

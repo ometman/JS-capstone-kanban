@@ -1,13 +1,13 @@
+import { result } from 'lodash';
 import * as infoInterface from './rescomInterface.js';
 import { postResData } from './postResCom.js';
 import { getResData } from './getResCom.js';
 import getData from './getData.js';
 import getResdataApi from './getResdataApi.js';
-import { result } from 'lodash';
 
 const itemPopup = () => {
   const reserveBtn = document.querySelectorAll('.reserve-btn');
-  //const blurBg = document.querySelectorAll('.blur');
+  // const blurBg = document.querySelectorAll('.blur');
   const reservations = document.querySelector('.reservations');
   console.log(reservations);
   const price = document.querySelector('.price');
@@ -29,7 +29,7 @@ const itemPopup = () => {
       //   //getResData(imgId);
       // }
       const data = await getData(btnIndex + 1);
-      //console.log('dataa', data.id);
+      // console.log('dataa', data.id);
       span.innerHTML = `${data.id}`;
 
       image.src = `${data.image}`;
@@ -37,20 +37,19 @@ const itemPopup = () => {
       title.innerHTML = `${data.title}`;
       // const resData = await getResdataApi(btnIndex + 1);
       // console.log('resDate', resData);
-      //getResFormDataApi();
+      // getResFormDataApi();
 
       const response = await getResdataApi(btnIndex + 1);
       const results = response.data
         .map(
-          (element) =>
-            `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`
+          (element) => `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`,
         )
         .join(' ');
       reservations.innerHTML = results;
       counter.innerHTML = response.data.length;
     });
 
-    //getResdataApi(btnIndex + 1);
+    // getResdataApi(btnIndex + 1);
   });
 };
 
