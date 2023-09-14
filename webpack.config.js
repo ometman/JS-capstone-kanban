@@ -28,6 +28,11 @@ module.exports = {
       },
 
       {
+        test: /\.txt$/i,
+        use: 'raw-loader',
+      },
+
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         use: [

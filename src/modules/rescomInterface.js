@@ -1,8 +1,15 @@
 // popup interface
+
+import { rest } from 'lodash';
+
 // create item image container
 export const resItemImage = document.createElement('img');
 resItemImage.className = 'item-image';
+resItemImage.setAttribute('src', '');
 resItemImage.alt = 'image of the selected item';
+
+const span = document.createElement('span');
+span.className = 'itemnumber';
 
 const des = document.createElement('div');
 des.className = 'description';
@@ -12,7 +19,10 @@ const descriptionLabel = document.createElement('div');
 descriptionLabel.className = 'descriptionlabel, label';
 descriptionLabel.innerHTML = `Description :`;
 const count = document.createElement('span');
+count.className = 'count';
 count.innerHTML = 0;
+const resTitlecontainer = document.createElement('div');
+resTitlecontainer.className = 'restitleContainer';
 const priceLabel = document.createElement('div');
 priceLabel.className = 'pricelabel, label';
 priceLabel.innerHTML = `Price :`;
@@ -28,10 +38,16 @@ closeBtn.className = 'close-btn-container';
 
 // create reservation title
 export const resTitle = document.createElement('h2');
-resTitle.innerHTML = `Reservations`;
+resTitle.innerHTML = 'Reservations';
 resTitle.className = 'reserve-data-heading';
 // create reservation list container
-export const resListContainer = document.createElement('ul');
+
+//create ul to host reversation list
+const restList = document.createElement('ul');
+restList.className = 'reservations';
+//map reservations here
+restList.innerHTML = '';
+export const resListContainer = document.createElement('div');
 resListContainer.className = 'reserve-list-container';
 
 // create reservation form title
@@ -83,11 +99,13 @@ resForm.appendChild(submitBtn);
 // add modal elements
 
 export const itemModal = document.querySelector('.reserve-modal');
+resTitlecontainer.append(resTitle, count);
+resListContainer.append(restList);
 itemModal.appendChild(closeBtn);
 itemModal.appendChild(resItemImage);
+itemModal.append(span);
 itemModal.append(container);
-itemModal.append(count);
-itemModal.appendChild(resTitle);
+itemModal.append(resTitlecontainer);
 itemModal.appendChild(resListContainer);
 itemModal.appendChild(resFormInstruction);
 itemModal.appendChild(resForm);
