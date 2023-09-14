@@ -84,7 +84,6 @@ ul.products-list {
   width: 25%;
   height: auto;
   margin-bottom: 3rem;
-  margin: 0;
 }
 
 .products-list li {
@@ -196,6 +195,7 @@ footer {
   height: 200px;
   border-bottom: 10px;
 }
+
 .restitleContainer {
   display: flex;
   align-items: center;
