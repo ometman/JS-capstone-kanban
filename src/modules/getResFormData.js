@@ -12,7 +12,6 @@ const getResFormData = async () => {
   }
 
   const item_id = id.innerHTML;
-  console.log('id', item_id);
 
   const obj = {
     date_end: startDate.value,
