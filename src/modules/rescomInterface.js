@@ -15,7 +15,7 @@ export const itemTitle = document.createElement('h2');
 itemTitle.className = 'item-data-heading';
 
 // create Item details
-export const itemDetails = document.createElement('ul');
+export const itemDetails = document.createElement('div');
 itemDetails.className = 'item-details-container';
 
 // create reservation title

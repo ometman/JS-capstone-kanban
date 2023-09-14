@@ -18,8 +18,8 @@ const itemsContainer = async () => {
         <img class="store-items-img" src="${theProducts[i].image}"/>
         <div class="title-like"><h2 class="itemid">Item ${itemId} </h2>
         </div>
-        <button id ="comment-btn" class="comment-btn">Comments</button>
-        <button id ="reserve-btn" class="reserve-btn">Reservations</button>
+        <button id="comment-btn" class="comment-btn">Comments</button>
+        <button id="reserve-btn" class="reserve-btn">Reservations</button>
         </li>`,
       );
       itemPopup(i + 1, theProducts[i].image, theProducts[i]);
