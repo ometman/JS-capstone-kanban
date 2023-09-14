@@ -9,11 +9,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="blur">
-      <nav>
-        <img class="logo" alt="logo image" />
+      <nav class="navbar">
+        <img src="" class="logo" alt="logo image" />
         <ul class="nav-list">
           <li id="stock-counter">Fashion Store</li>
           <li>Types</li>
@@ -22,10 +30,13 @@
       </nav>
     </header>
     <main>
-      <ul id="products-list" class="products-blur"></ul>
-      <div class="reserve-modal"></div>
+      <ul id="products-list" class="products-list blur"></ul>
+      <div class="reservation-container">
+        <i class="fa-solid fa-x"></i>
+        <div class="reserve-modal"></div>
+      </div>
     </main>
-    <footer class="blur">
+    <footer>
       <p>
         Created by <a href="https://github.com/ometman">@Ometman</a>,
         <a href="https://github.com/enocol">@Enoh</a>,
