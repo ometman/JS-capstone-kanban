@@ -24,6 +24,7 @@ a:link {
   background-size: cover;
   margin: 0 2rem;
 }
+
 .navbar {
   display: flex;
   width: 90%;
@@ -64,20 +65,33 @@ li .store-items-img {
   text-align: center;
 }
 
-ul {
+ul.nav-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3%;
 }
 
-ul li {
+ul.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
+}
+
+.nav-list li {
   list-style: none;
   width: 25%;
   height: auto;
   margin-bottom: 3rem;
 }
 
+.products-list li {
+  list-style: none;
+  width: 25%;
+  height: auto;
+  margin-bottom: 3rem;
+}
 .nav-list li {
   margin: 0;
 }
@@ -137,16 +151,18 @@ footer {
 
 .reserve-modal {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
   width: 95%;
-  height: auto;
-  padding-top: 10px;
+  height: 100vh;
+  padding-top: 40px;
   border-radius: 10px;
   margin: 0 auto;
   border: 2px solid;
+  overflow: scroll;
 }
 
 .reservation-container {
@@ -167,6 +183,7 @@ footer {
   top: 20px;
   right: 60px;
   font-size: 30px;
+  z-index: 99;
 }
 
 .show {
@@ -182,48 +199,31 @@ footer {
   height: 200px;
   border-bottom: 10px;
 }
+.restitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .reserve-data-heading {
   font-family: 'Roboto', sans-serif;
-  color: #fff;
   background: none;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.reserve-list-container {
-  background: none;
-  width: 40%;
-  border: 1px solid #fff;
-  padding: 1%;
-  box-shadow: 1px 1px 1px 4px #06486e;
-  text-align: center;
-  overflow-y: scroll;
-  list-style-type: none;
-  border: 1px solid red;
-  flex: 1;
-}
-
-.reserve-list-content {
-  margin: 2px auto;
-  font-family: 'Roboto', sans-serif;
-  color: #fff;
-  font-size: 16px;
-  background: none;
-}
-
 .reserve-form-title {
   font-family: 'Roboto', sans-serif;
   background: none;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 15px;
+
   /*margin: 5px auto 0 auto;*/
 }
 
 .reserve-form {
   width: 70%;
   margin: 0 auto;
-  padding: 1% 3%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -256,7 +256,7 @@ footer {
   background: #fff;
   font-family: 'Roboto', sans-serif;
   color: #000;
-  font-size: 1rem;
+  font-size: 10px;
   box-shadow: 4px 6px 3px #000;
 }
 
@@ -287,4 +287,26 @@ footer {
 .label {
   font-size: 18px;
   font-weight: bolder;
+}
+
+.reserve-list-container {
+  border: 1px solid blue;
+  width: 40%;
+  min-height: 60px;
+  overflow: scroll;
+}
+
+.reservation ul {
+  margin: 0;
+  width: auto;
+}
+
+.count {
+  width: auto;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
 }
