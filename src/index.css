@@ -258,6 +258,8 @@ footer {
   color: #000;
   font-size: 10px;
   box-shadow: 4px 6px 3px #000;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #products-list {
