@@ -157,12 +157,12 @@ footer {
   align-items: center;
   gap: 5px;
   width: 95%;
-  height: 100vh;
-  padding-top: 40px;
+  height: auto;
+  margin: 40px 10px;
+  padding: 25px 10px;
   border-radius: 10px;
   margin: 0 auto;
   border: 2px solid;
-  overflow: scroll;
 }
 
 .reservation-container {
@@ -244,7 +244,7 @@ footer {
   border-radius: 1%;
   color: #000;
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 10px;
   border: none;
   box-shadow: 1px 1px 3px #000;
   background: #fff;
@@ -252,13 +252,13 @@ footer {
 
 .submit {
   width: 30%;
-  padding: 1%;
+  padding: 3px;
   background: #fff;
   font-family: 'Roboto', sans-serif;
   color: #000;
   font-size: 10px;
   box-shadow: 4px 6px 3px #000;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -292,10 +292,10 @@ footer {
 }
 
 .reserve-list-container {
-  border: 1px solid blue;
   width: 40%;
   min-height: 60px;
-  overflow: scroll;
+  overflow-y: scroll;
+  padding: 5px;
 }
 
 .reservation ul {
