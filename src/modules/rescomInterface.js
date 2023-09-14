@@ -1,7 +1,5 @@
 // popup interface
 
-import { rest } from 'lodash';
-
 // create item image container
 export const resItemImage = document.createElement('img');
 resItemImage.className = 'item-image';

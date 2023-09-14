@@ -25,7 +25,7 @@ const itemsContainer = async () => {
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
-        </li>`
+        </li>`,
       );
 
       itemPopup();
