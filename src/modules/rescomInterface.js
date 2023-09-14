@@ -41,10 +41,10 @@ resTitle.className = 'reserve-data-heading';
 // create reservation list container
 
 // create ul to host reversation list
-const restList = document.createElement('ul');
-restList.className = 'reservations';
+export const resList = document.createElement('ul');
+resList.className = 'reservations';
 // map reservations here
-restList.innerHTML = '';
+resList.innerHTML = '';
 export const resListContainer = document.createElement('div');
 resListContainer.className = 'reserve-list-container';
 
@@ -98,7 +98,7 @@ resForm.appendChild(submitBtn);
 
 export const itemModal = document.querySelector('.reserve-modal');
 resTitlecontainer.append(resTitle, count);
-resListContainer.append(restList);
+resListContainer.append(resList);
 itemModal.appendChild(closeBtn);
 itemModal.appendChild(resItemImage);
 itemModal.append(span);

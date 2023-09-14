@@ -4,7 +4,8 @@ import getResdataApi from './getResdataApi.js';
 
 const itemPopup = () => {
   const reserveBtn = document.querySelectorAll('.reserve-btn');
-  const reservations = document.querySelector('.reservations');
+  // const reservations = document.querySelector('.reservations');
+  const reservations = infoInterface.resList;
   const price = document.querySelector('.price');
   const title = document.querySelector('.description');
   const image = document.querySelector('.item-image');
