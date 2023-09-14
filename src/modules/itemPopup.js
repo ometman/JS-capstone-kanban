@@ -18,7 +18,7 @@ const itemPopup = () => {
       reservationContainer.classList.add('show');
 
       const data = await getData(btnIndex + 1);
-      ddz;
+
       span.innerHTML = `${data.id}`;
 
       image.src = `${data.image}`;
