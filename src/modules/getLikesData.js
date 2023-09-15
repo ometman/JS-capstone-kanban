@@ -1,11 +1,9 @@
-// import axios from 'axios';
+const getLikesurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/votSVyM8b966LHhFVfLV/likes';
 
-// const likesurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/votSVyM8b966LHhFVfLV/likes';
+const getLikesData = async () => {
+  const response = await fetch(getLikesurl);
+  const feedback = await response.json();
+  return feedback;
+};
 
-// export const getLikesData = async () => {
-//   const response = await axios.post(likesurl);
-//   console.log('response');
-//   return response;
-// };
-
-// export default getLikesData;
+export default getLikesData;

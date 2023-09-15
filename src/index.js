@@ -4,7 +4,8 @@ import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import Logo from './logo/logo.jpg';
 import getResFormData from './modules/getResFormData.js';
-import itemLikes from './modules/itemLikes.js'
+import postLikes from './modules/postLikes.js';
+import getLikes from './modules/getLikes.js';
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
@@ -32,7 +33,9 @@ const itemsContainer = async () => {
       );
       itemPopup();
       const likeBtns = document.querySelectorAll('.fa-heart');
-      itemLikes(i + 1, likeBtns);
+      postLikes(i + 1, likeBtns);
+      const cntEl = document.querySelectorAll('.likes');
+      getLikes(cntEl);
       // await getResdataApi(itemId);
     }
   };
