@@ -8,7 +8,7 @@ import productCount from './modules/productCount.js';
 const store = document.querySelector('.counter');
 
 const logo = document.querySelector('.logo');
-logo.innerHTML = `<div class="oke">O K E</div>`;
+logo.innerHTML = '<div class="oke">O K E</div>';
 
 // Items Interface
 const itemsContainer = async () => {
@@ -27,7 +27,7 @@ const itemsContainer = async () => {
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
-        </li>`
+        </li>`,
       );
 
       itemPopup();
