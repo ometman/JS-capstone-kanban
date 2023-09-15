@@ -161,6 +161,21 @@ footer {
   border: 2px solid;
 }
 
+.comment-modal {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 95%;
+  height: auto;
+  padding: 25px 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 2px solid;
+}
+
 .reservation-container {
   display: none;
   position: fixed;
@@ -194,6 +209,11 @@ footer {
   width: 200px;
   height: 200px;
   border-bottom: 10px;
+}
+
+.itemimage {
+  width: 200px;
+  height: 200px;
 }
 
 .restitleContainer {
@@ -300,4 +320,25 @@ footer {
   border-radius: 50%;
   text-align: center;
   padding: 5px;
+}
+
+.textarea {
+  height: 55px;
+  width: 50%;
+}
+
+.comment-container {
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 5px;
+  padding: 10px;
+  height: 100vh;
+}
+.showcomment {
+  display: block;
 }
