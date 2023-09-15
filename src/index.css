@@ -129,6 +129,17 @@ ul.products-list {
 
 .fa {
   font-size: 1.5rem;
+  color: red;
+}
+
+.fa:hover {
+  font-size: 1.5rem;
+  color: green;
+}
+
+#likes {
+ font-size: 1.5rem;
+ color: green;
 }
 
 footer {

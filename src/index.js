@@ -4,6 +4,7 @@ import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import Logo from './logo/logo.jpg';
 import getResFormData from './modules/getResFormData.js';
+import itemLikes from './modules/itemLikes.js'
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
@@ -22,13 +23,16 @@ const itemsContainer = async () => {
         <li class="store-items">
         <img class="store-items-img" src="${theProducts[i].image}"/>
         <div class="title-like"><h2 class="itemid">Item ${itemId} </h2>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <p id="likes-count"></p>
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
         </li>`,
       );
-
       itemPopup();
+      const likeBtns = document.querySelectorAll('.fa-heart');
+      itemLikes(i + 1, likeBtns);
       // await getResdataApi(itemId);
     }
   };
