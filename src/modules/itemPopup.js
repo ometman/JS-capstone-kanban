@@ -4,7 +4,6 @@ import getResdataApi from './getResdataApi.js';
 
 const itemPopup = () => {
   const reserveBtn = document.querySelectorAll('.reserve-btn');
-  // const reservations = document.querySelector('.reservations');
   const reservations = infoInterface.resList;
   const price = document.querySelector('.price');
   const title = document.querySelector('.description');
@@ -28,7 +27,8 @@ const itemPopup = () => {
       const response = await getResdataApi(btnIndex + 1);
       const results = response.data
         .map(
-          (element) => `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`,
+          (element) =>
+            `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`
         )
         .join(' ');
       reservations.innerHTML = results;
