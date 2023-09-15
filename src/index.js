@@ -4,6 +4,7 @@ import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import Logo from './logo/logo.jpg';
 import getResFormData from './modules/getResFormData.js';
+import commentPopup from './modules/commentPopup.js';
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
@@ -25,10 +26,11 @@ const itemsContainer = async () => {
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
-        </li>`,
+        </li>`
       );
 
       itemPopup();
+      commentPopup();
       // await getResdataApi(itemId);
     }
   };
