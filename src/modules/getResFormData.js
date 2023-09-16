@@ -34,8 +34,7 @@ const getResFormData = async (e) => {
   const response = await getResdataApi(itemId);
   const results = response.data
     .map(
-      (element) =>
-        `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`
+      (element) => `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`,
     )
     .join(' ');
   reservations.innerHTML = results;
