@@ -3,6 +3,7 @@ import getProducts from './modules/getProducts.js';
 import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import getResFormData from './modules/getResFormData.js';
+import commentPopup from './modules/commentPopup.js';
 import productCount from './modules/productCount.js';
 
 const store = document.querySelector('.counter');
@@ -27,10 +28,11 @@ const itemsContainer = async () => {
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
-        </li>`,
+        </li>`
       );
 
       itemPopup();
+      commentPopup();
       // await getResdataApi(itemId);
     }
   };
