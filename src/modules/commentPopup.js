@@ -1,5 +1,5 @@
 import * as comInterface from './commentInterface.js';
-import getData from './getData.js';
+import getData, { getCommentData } from './getData.js';
 
 const commentPopup = async () => {
   const commentBtn = document.querySelectorAll('.comment-btn');
@@ -10,20 +10,30 @@ const commentPopup = async () => {
   const comments = comInterface.comList;
   const title = document.querySelector('.title');
 
-  const span = document.querySelector('.idnumber');
+  const commentId = document.querySelector('.commentNumber');
 
   commentBtn.forEach((btn, index) => {
     btn.addEventListener('click', async () => {
-      console.log('comments', index);
       commentContainer.classList.add('showcomment');
 
       const results = await getData(index + 1);
-
-      span.innerHTML = `${results.id}`;
+      const comment = await getCommentData(index + 1);
+      commentId.innerHTML = `${results.id}`;
 
       image.src = `${results.image}`;
       price.innerHTML = `${results.price} $`;
       title.innerHTML = `${results.title}`;
+      while (comments.firstChild) {
+        comments.removeChild(comments.firstChild);
+      }
+      comment.forEach((com) => {
+        if (typeof (com.comment) === 'string') {
+          const commentDiv = document.createElement('li'); // Create a new <div> element
+          commentDiv.classList.add('comment-display');
+          commentDiv.textContent = `${com.comment} by ${com.username}`; // Set the text content of the <div> to the comment
+          comments.appendChild(commentDiv); // Append the <div> to the comments container
+        }
+      });
     });
   });
 };

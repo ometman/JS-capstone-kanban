@@ -246,6 +246,18 @@ footer {
   background: none;
 }
 
+.comment-form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  background: none;
+  border-radius: 8px;
+}
+
 .username,
 .startdate,
 .enddate {
@@ -258,6 +270,7 @@ footer {
   border: none;
   box-shadow: 1px 1px 3px #000;
   background: #fff;
+  border-radius: 6px;
 }
 
 .submit {
@@ -339,6 +352,14 @@ footer {
   padding: 10px;
   height: 100vh;
 }
+
 .showcomment {
   display: block;
 }
+
+.reservations {
+  height: 100px;
+  background-color: white;
+  
+}
+

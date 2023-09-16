@@ -3,8 +3,8 @@ comItemImage.className = 'itemimage';
 comItemImage.setAttribute('src', '');
 comItemImage.alt = 'image of the selected item';
 
-const span = document.createElement('span');
-span.className = 'idnumber';
+const idNumber = document.createElement('span');
+idNumber.className = 'id-number';
 
 const des = document.createElement('div');
 des.className = 'title';
@@ -50,10 +50,14 @@ export const comFormInstruction = document.createElement('h3');
 comFormInstruction.className = 'reserve-form-title';
 comFormInstruction.innerText = 'Add a comment';
 
+// create comment id
+const commentId = document.createElement('span');
+commentId.className = 'commentNumber';
+
 // create username input
 export const userName = document.createElement('input');
 userName.className = 'username';
-userName.id = 'username';
+userName.id = 'comment-username';
 userName.type = 'text';
 userName.value = '';
 userName.placeholder = 'Your name';
@@ -77,7 +81,7 @@ submit.innerText = 'comment';
 
 // create reservation form
 export const comForm = document.createElement('form');
-comForm.className = 'reserve-form';
+comForm.className = 'comment-form';
 comForm.appendChild(userName);
 comForm.appendChild(textarea);
 comForm.appendChild(submit);
@@ -86,10 +90,11 @@ comForm.appendChild(submit);
 
 export const comModal = document.querySelector('.comment-modal');
 comTitlecontainer.append(comTitle, count);
+comTitlecontainer.append(comTitle, commentId);
 comListContainer.append(comList);
 comModal.appendChild(closeBtn);
 comModal.appendChild(comItemImage);
-comModal.append(span);
+comModal.append(commentId);
 comModal.append(container);
 comModal.append(comTitlecontainer);
 comModal.appendChild(comListContainer);

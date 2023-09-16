@@ -27,8 +27,7 @@ const itemPopup = () => {
       const response = await getResdataApi(btnIndex + 1);
       const results = response.data
         .map(
-          (element) =>
-            `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`
+          (element) => `<li>${element.date_start} to ${element.date_end} from ${element.username}</li>`,
         )
         .join(' ');
       reservations.innerHTML = results;
