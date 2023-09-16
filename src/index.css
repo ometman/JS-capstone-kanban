@@ -173,6 +173,7 @@ footer {
   padding: 25px 10px;
   border-radius: 10px;
   margin: 0 auto;
+  border: 2px solid;
 }
 
 .reservation-container {
@@ -240,7 +241,7 @@ footer {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 5px;
   background: none;
 }
@@ -272,7 +273,6 @@ footer {
 }
 
 .submit {
-  align-self: flex-end;
   width: 20%;
   padding: 3px;
   background: #fff;
@@ -281,7 +281,6 @@ footer {
   font-size: 18px;
   box-shadow: 4px 6px 3px #000;
   font-weight: bold;
-  margin-right: 10rem;
   border-radius: 6px;
 }
 

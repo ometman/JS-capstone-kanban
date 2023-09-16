@@ -14,6 +14,7 @@ const itemsContainer = async () => {
   const theProducts = await getProducts();
   const productsList = document.getElementById('products-list');
   productsList.innerHTML = '';
+  
   const getAllProduts = async () => {
     for (let i = 0; i < theProducts.length; i += 1) {
       const itemId = i + 1;
