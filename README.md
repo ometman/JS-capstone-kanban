@@ -38,6 +38,10 @@
 
 We used amonst other things ES6 syntax, asynchronous codes, callbacks, modules and promises. Best JS practices, Gitflow and AAA pattern tests were employed. And, tests of projects, reservations and comments.  In all production tasks we employ best practices. 
 
+**Watch a Brief Video: Introduction to this Project**
+https://drive.google.com/file/d/1HkB_JvZKOvD0k0s16ansQhv77aMFdO-0/view?usp=sharing
+
+
 >The project includes designs for two different screen sizes.
 
  - Mobile: up to 768px wide.
@@ -187,7 +191,7 @@ You can deploy this project using:
 
 ## 👥 Author <a name="authors"></a>
 
-> Developed by: Omet Omeni (Ometman)
+> Developed by: Omet Omeni (Ometman) && Enoh Collins (enohcol) && Kenneth Adu (Kwamay)
 
 ### Authors
 - GitHub: [@ometman](https://github.com/ometman)
