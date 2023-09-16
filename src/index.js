@@ -58,6 +58,5 @@ const count = await productCount();
 store.innerHTML = count;
 // getData();
 
-
 const form = document.querySelector('.reserve-form');
 form.addEventListener('submit', getResFormData);
