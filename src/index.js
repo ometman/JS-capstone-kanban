@@ -12,9 +12,10 @@ logo.src = Logo;
 const itemsContainer = async () => {
   const likes = await new TheLikes().likesStoredData;
   const theProducts = await getProducts();
+
   const productsList = document.getElementById('products-list');
   productsList.innerHTML = '';
-  const getAllProduts = async () => {
+  const getAllProducts = async () => {
     for (let i = 0; i < theProducts.length; i += 1) {
       const itemId = i + 1;
       productsList.insertAdjacentHTML(
@@ -33,7 +34,7 @@ const itemsContainer = async () => {
       itemPopup();
     }
   };
-  return getAllProduts();
+  return getAllProducts();
 };
 
 // display items
@@ -50,3 +51,6 @@ document.addEventListener(('click'), async (e) => {
 
 const form = document.querySelector('.reserve-form');
 form.addEventListener('submit', getResFormData);
+
+// new TheLikes().sortLikes()
+// new TheLikes().getLikes()
