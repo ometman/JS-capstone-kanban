@@ -57,6 +57,8 @@ export const getCommentsFormData = async (e) => {
   comments.appendChild(commentDiv); // Append the <div> to the comments container
   nameInput.value = '';
   commentInput.value = '';
+  const count = document.getElementById('comment-count');
+  count.innerHTML = +count.innerHTML + 1;
 };
 
 export default getResFormData;

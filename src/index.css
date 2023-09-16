@@ -15,7 +15,7 @@ a:link {
 }
 
 .logo {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 10px;
   width: 5rem;
   height: 5rem;
@@ -33,7 +33,7 @@ a:link {
 .nav-list {
   display: flex;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: darkslategray;
   list-style: none;
@@ -136,7 +136,7 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: darkslategray;
   border-top: 1px solid black;
@@ -173,7 +173,6 @@ footer {
   padding: 25px 10px;
   border-radius: 10px;
   margin: 0 auto;
-  border: 2px solid;
 }
 
 .reservation-container {
@@ -223,14 +222,14 @@ footer {
 }
 
 .reserve-data-heading {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: none;
   font-size: 1.5rem;
   font-weight: 400;
 }
 
 .reserve-form-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: none;
   font-size: 15px;
 }
@@ -252,8 +251,8 @@ footer {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 5px;
+  align-items: center;
+  gap: 8px;
   background: none;
   border-radius: 8px;
 }
@@ -263,24 +262,27 @@ footer {
 .enddate {
   width: 50%;
   padding: 5px;
-  border-radius: 1%;
+  border-radius: 8px;
   color: #000;
-  font-family: 'Roboto', sans-serif;
-  font-size: 10px;
+  font-family: "Roboto", sans-serif;
   border: none;
   box-shadow: 1px 1px 3px #000;
   background: #fff;
+  font-size: 18px;
 }
 
 .submit {
-  width: 30%;
+  align-self: flex-end;
+  width: 20%;
   padding: 3px;
   background: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000;
-  font-size: 12px;
+  font-size: 18px;
   box-shadow: 4px 6px 3px #000;
   font-weight: bold;
+  margin-right: 10rem;
+  border-radius: 6px;
 }
 
 #products-list {
@@ -335,8 +337,32 @@ footer {
 }
 
 .textarea {
-  height: 55px;
+  height: 70px;
   width: 50%;
+  padding-top: 14px;
+  padding-left: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.comTitlecontainer {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.comment-display {
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+  background: white;
+}
+
+.comment-display:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.comment-display:nth-child(even) {
+  background-color: #fff;
 }
 
 .comment-container {

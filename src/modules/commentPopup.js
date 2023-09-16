@@ -5,6 +5,7 @@ const commentPopup = async () => {
   const commentBtn = document.querySelectorAll('.comment-btn');
   const commentContainer = document.querySelector('.comment-container');
   const image = document.querySelector('.itemimage');
+  const count = document.getElementById('comment-count');
 
   const price = document.querySelector('.prices');
   const comments = comInterface.comList;
@@ -18,6 +19,7 @@ const commentPopup = async () => {
 
       const results = await getData(index + 1);
       const comment = await getCommentData(index + 1);
+      count.innerHTML = comment.length;
       commentId.innerHTML = `${results.id}`;
 
       image.src = `${results.image}`;
