@@ -6,6 +6,12 @@ resItemImage.className = 'item-image';
 resItemImage.setAttribute('src', '');
 resItemImage.alt = 'image of the selected item';
 
+const label = document.createElement('div');
+label.className = 'itemlabel';
+
+const span2 = document.createElement('span');
+span2.className = 'span2';
+span2.innerHTML = 'Item';
 const span = document.createElement('span');
 span.className = 'itemnumber';
 
@@ -97,11 +103,12 @@ resForm.appendChild(submitBtn);
 // add modal elements
 
 export const itemModal = document.querySelector('.reserve-modal');
+label.append(span2, span);
 resTitlecontainer.append(resTitle, count);
 resListContainer.append(resList);
 itemModal.appendChild(closeBtn);
 itemModal.appendChild(resItemImage);
-itemModal.append(span);
+itemModal.append(label); // i have to change this to have them two spans
 itemModal.append(container);
 itemModal.append(resTitlecontainer);
 itemModal.appendChild(resListContainer);
