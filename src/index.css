@@ -270,7 +270,6 @@ footer {
   border: none;
   box-shadow: 1px 1px 3px #000;
   background: #fff;
-  border-radius: 6px;
 }
 
 .submit {
@@ -360,6 +359,4 @@ footer {
 .reservations {
   height: 100px;
   background-color: white;
-  
 }
-

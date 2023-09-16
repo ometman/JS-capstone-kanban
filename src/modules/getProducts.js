@@ -5,7 +5,6 @@ const getProducts = async () => {
     const { data } = await axios.get(
       'https://fakestoreapi.com/products?limit=6',
     );
-    console.log(data);
     return data;
   } catch (error) {
     return 'something went wrong';
