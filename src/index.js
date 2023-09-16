@@ -2,12 +2,20 @@ import './index.css';
 import getProducts from './modules/getProducts.js';
 import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
-import Logo from './logo/logo.jpg';
 import getResFormData from './modules/getResFormData.js';
+
 import TheLikes from './modules/showLikes.js';
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
+
+import productCount from './modules/productCount.js';
+
+const store = document.querySelector('.counter');
+
+const logo = document.querySelector('.logo');
+logo.innerHTML = '<div class="oke">O K E</div>';
+
 // Items Interface
 const itemsContainer = async () => {
   const likes = await new TheLikes().likesStoredData;
@@ -47,6 +55,11 @@ document.addEventListener(('click'), async (e) => {
     await itemsContainer();
   }
 });
+productCount();
+const count = await productCount();
+store.innerHTML = count;
+// getData();
+
 
 const form = document.querySelector('.reserve-form');
 form.addEventListener('submit', getResFormData);

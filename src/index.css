@@ -16,30 +16,58 @@ a:link {
 
 .logo {
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
   width: 5rem;
   height: 5rem;
-  padding-right: 0.5%;
   border-radius: 50%;
-  background-size: cover;
-  margin: 0 2rem;
+  border: 5px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #000;
+}
+
+.oke {
+  font-size: 15px;
+  font-weight: bold;
+  width: 90%;
+  background-color: #000;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  height: auto;
+  padding: 5px;
 }
 
 .navbar {
   display: flex;
   width: 90%;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav-list {
   display: flex;
-  align-items: center;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: darkslategray;
   list-style: none;
-  font-weight: 700;
+  font-weight: bolder;
   cursor: pointer;
-  width: 100%;
+  width: 60%;
+  align-items: center;
+  gap: 150px;
+}
+
+header.blur {
+  margin: 20px auto;
+}
+
+.nav-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 li .store-items-img {
@@ -65,25 +93,11 @@ li .store-items-img {
   text-align: center;
 }
 
-ul.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3%;
-}
-
 ul.products-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3%;
-}
-
-.nav-list li {
-  list-style: none;
-  width: 25%;
-  height: auto;
-  margin-bottom: 3rem;
 }
 
 .products-list li {
@@ -317,6 +331,16 @@ footer {
 }
 
 .count {
+  width: auto;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
+}
+
+.counter {
   width: auto;
   height: auto;
   background-color: #000;
