@@ -1,5 +1,6 @@
 import * as comInterface from './commentInterface.js';
 import getData, { getCommentData } from './getData.js';
+import getCommentCount from './commentCount.js';
 
 const commentPopup = async () => {
   const commentBtn = document.querySelectorAll('.comment-btn');
@@ -19,7 +20,7 @@ const commentPopup = async () => {
 
       const results = await getData(index + 1);
       const comment = await getCommentData(index + 1);
-      count.innerHTML = comment.length;
+      count.innerHTML = getCommentCount(comment);
       commentId.innerHTML = `${results.id}`;
 
       image.src = `${results.image}`;
