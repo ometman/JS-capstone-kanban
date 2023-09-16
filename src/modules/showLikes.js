@@ -14,9 +14,6 @@ export default class TheLikes {
       item_id: item,
     };
     await sendLikesData(newlike);
-    // getLikesData().then((res) => {
-    //   likesData(res);
-    // });
   }
 
     getLikes = async () => {
@@ -28,26 +25,6 @@ export default class TheLikes {
         });
       return likedValues;
     };
-
-    // likesUpdate = async (eId) => {
-    //   const likeS = this.likesStoredData;
-    //   getLikesData().then((res) => {
-    //     res.forEach((item) => {
-    //       likeS.forEach((like) => {
-    //         const ApiItem = res.find((item) => Number(item.item_id) === Number(eId));
-    //         const localItem = likeS.find((item) => Number(item.item_id) === Number(eId));
-    //         if (ApiItem.item_id === localItem.item_id) {
-    //           like.likes = item.likes;
-    //         }
-    //       });
-    //     });
-    //   });
-    // };
-
-    // sortLikes = () => {
-    //   const likes = this.likesStoredData;
-    //   likes.sort((task1, task2) => task1.item_id - task2.item_id);
-    // }
 
     getNewLike = async (itemId) => {
       await this.postLike(itemId);
