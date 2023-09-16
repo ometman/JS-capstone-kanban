@@ -6,9 +6,6 @@ import getResFormData from './modules/getResFormData.js';
 
 import TheLikes from './modules/showLikes.js';
 
-const logo = document.querySelector('.logo');
-logo.src = Logo;
-
 import productCount from './modules/productCount.js';
 
 const store = document.querySelector('.counter');
@@ -64,6 +61,3 @@ store.innerHTML = count;
 
 const form = document.querySelector('.reserve-form');
 form.addEventListener('submit', getResFormData);
-
-// new TheLikes().sortLikes()
-// new TheLikes().getLikes()
