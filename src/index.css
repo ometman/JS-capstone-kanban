@@ -16,30 +16,58 @@ a:link {
 
 .logo {
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
   width: 5rem;
   height: 5rem;
-  padding-right: 0.5%;
   border-radius: 50%;
-  background-size: cover;
-  margin: 0 2rem;
+  border: 5px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #000;
+}
+
+.oke {
+  font-size: 15px;
+  font-weight: bold;
+  width: 90%;
+  background-color: #000;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  height: auto;
+  padding: 5px;
 }
 
 .navbar {
   display: flex;
   width: 90%;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav-list {
   display: flex;
-  align-items: center;
+  padding: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: darkslategray;
   list-style: none;
-  font-weight: 700;
+  font-weight: bolder;
   cursor: pointer;
-  width: 100%;
+  width: 60%;
+  align-items: center;
+  gap: 150px;
+}
+
+header.blur {
+  margin: 20px auto;
+}
+
+.nav-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 li .store-items-img {
@@ -65,25 +93,11 @@ li .store-items-img {
   text-align: center;
 }
 
-ul.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3%;
-}
-
 ul.products-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3%;
-}
-
-.nav-list li {
-  list-style: none;
-  width: 25%;
-  height: auto;
-  margin-bottom: 3rem;
 }
 
 .products-list li {
@@ -161,21 +175,6 @@ footer {
   border: 2px solid;
 }
 
-.comment-modal {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 95%;
-  height: auto;
-  padding: 25px 10px;
-  border-radius: 10px;
-  margin: 0 auto;
-  border: 2px solid;
-}
-
 .reservation-container {
   display: none;
   position: fixed;
@@ -211,11 +210,6 @@ footer {
   border-bottom: 10px;
 }
 
-.itemimage {
-  width: 200px;
-  height: 200px;
-}
-
 .restitleContainer {
   display: flex;
   align-items: center;
@@ -244,18 +238,6 @@ footer {
   align-items: start;
   gap: 5px;
   background: none;
-}
-
-.comment-form {
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 5px;
-  background: none;
-  border-radius: 8px;
 }
 
 .username,
@@ -334,29 +316,18 @@ footer {
   padding: 5px;
 }
 
-.textarea {
-  height: 55px;
-  width: 50%;
+.counter {
+  width: auto;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
 }
 
-.comment-container {
-  display: none;
-  position: fixed;
-  background-color: #fff;
-  z-index: 99;
-  width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 5px;
-  padding: 10px;
-  height: 100vh;
-}
-
-.showcomment {
-  display: block;
-}
-
-.reservations {
-  height: 100px;
-  background-color: white;
+.itemnumber,
+.span2 {
+  padding: 5px;
+  font-weight: bolder;
 }
