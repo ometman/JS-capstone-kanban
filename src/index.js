@@ -4,14 +4,13 @@ import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
 import Logo from './logo/logo.jpg';
 import getResFormData from './modules/getResFormData.js';
-import postLikes from './modules/postLikes.js';
-import getLikes from './modules/getLikes.js';
+import TheLikes from './modules/showLikes.js';
 
 const logo = document.querySelector('.logo');
 logo.src = Logo;
-
 // Items Interface
 const itemsContainer = async () => {
+  const likes = await new TheLikes().likesStoredData;
   const theProducts = await getProducts();
   const productsList = document.getElementById('products-list');
   productsList.innerHTML = '';
@@ -24,29 +23,30 @@ const itemsContainer = async () => {
         <li class="store-items">
         <img class="store-items-img" src="${theProducts[i].image}"/>
         <div class="title-like"><h2 class="itemid">Item ${itemId} </h2>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <p id="likes-count"></p>
+        <i id="${i}" class="fa fa-heart likebtn" aria-hidden="true"></i>
+        <p class="likes-count">${likes[i].likes}</p>
         </div>
         <button id ="comment-btn" class="comment-btn">Comments</button>
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
         </li>`,
       );
       itemPopup();
-      const likeBtns = document.querySelectorAll('.fa-heart');
-      postLikes(i + 1, likeBtns);
-      const cntEl = document.querySelectorAll('.likes');
-      getLikes(cntEl);
-      // await getResdataApi(itemId);
     }
   };
-
   return getAllProduts();
 };
 
 // display items
 itemsContainer();
 closePopup();
-// getData();
+
+document.addEventListener(('click'), async (e) => {
+  const newLike = new TheLikes();
+  if (e.target.classList.contains('likebtn')) {
+    await newLike.getNewLike(e.target.id);
+    await itemsContainer();
+  }
+});
 
 const form = document.querySelector('.reserve-form');
 form.addEventListener('submit', getResFormData);
