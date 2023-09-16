@@ -5,9 +5,14 @@ import closePopup from './modules/closePopUp.js';
 import Logo from './logo/logo.jpg';
 import getResFormData, { getCommentsFormData } from './modules/getResFormData.js';
 import commentPopup from './modules/commentPopup.js';
+import getResFormData from './modules/getResFormData.js';
+import productCount from './modules/productCount.js';
+
+const store = document.querySelector('.counter');
+
 
 const logo = document.querySelector('.logo');
-logo.src = Logo;
+logo.innerHTML = '<div class="oke">O K E</div>';
 
 // Items Interface
 const itemsContainer = async () => {
@@ -42,6 +47,9 @@ const itemsContainer = async () => {
 // display items
 itemsContainer();
 closePopup();
+productCount();
+const count = await productCount();
+store.innerHTML = count;
 // getData();
 
 const form = document.querySelector('.reserve-form');
