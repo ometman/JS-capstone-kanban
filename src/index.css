@@ -355,3 +355,86 @@ footer {
   padding: 5px;
   font-weight: bolder;
 }
+
+.textarea {
+  height: 70px;
+  width: 50%;
+  padding-top: 14px;
+  padding-left: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.comTitlecontainer {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.comment-display {
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+  background: white;
+}
+
+.comment-display:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.comment-display:nth-child(even) {
+  background-color: #fff;
+}
+
+.comment-container {
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 5px;
+  padding: 10px;
+  height: 100vh;
+}
+
+.showcomment {
+  display: block;
+}
+
+.reservations {
+  height: 100px;
+  background-color: white;
+}
+
+.comment-modal {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 95%;
+  height: auto;
+  padding: 25px 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  border: 2px solid;
+}
+
+.itemimage {
+  width: 200px;
+  height: 200px;
+}
+
+.comment-form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border-radius: 8px;
+}

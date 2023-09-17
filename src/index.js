@@ -2,7 +2,9 @@ import './index.css';
 import getProducts from './modules/getProducts.js';
 import itemPopup from './modules/itemPopup.js';
 import closePopup from './modules/closePopUp.js';
-import getResFormData from './modules/getResFormData.js';
+import getResFormData, { getCommentsFormData } from './modules/getResFormData.js';
+
+import commentPopup from './modules/commentPopup.js';
 
 import TheLikes from './modules/showLikes.js';
 
@@ -36,6 +38,7 @@ const itemsContainer = async () => {
         <button id ="reserve-btn" class="reserve-btn">Reservations</button>
         </li>`,
       );
+      commentPopup();
       itemPopup();
     }
   };
@@ -59,4 +62,6 @@ store.innerHTML = count;
 // getData();
 
 const form = document.querySelector('.reserve-form');
+const commentForm = document.querySelector('.comment-form');
+commentForm.addEventListener('submit', getCommentsFormData);
 form.addEventListener('submit', getResFormData);
